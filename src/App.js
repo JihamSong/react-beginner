@@ -6,7 +6,7 @@ function App() {
   const [counter, setValue] = useState(0);
   return (
     <div>
-      <h1 className={styles.title}>😊Welcome Back!</h1>
+      <h1 className={styles.title}>😊Welcome Back!!</h1>
       <Button text="Continue" />
     </div>
   );
