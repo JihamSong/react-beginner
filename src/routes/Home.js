@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import Movie from "../components/Movie";
+import styles from "./Home.module.css";
 
 /* Home 라우트는 모든 영화 보여줌 */
 function Home() {
@@ -19,22 +20,26 @@ function Home() {
   return (
     <div>
       {loading ? (
-        <h3>로딩 중...</h3>
+        <div className={styles.loading}></div>
       ) : (
-        <div>
-          {movies.map((movie) => (
-            <Movie
-              key={movie.id}
-              id={movie.id}
-              img={movie.medium_cover_image}
-              title={movie.title}
-              summary={movie.summary}
-              genres={movie.genres}
-            />
-          ))}
+        <div className={styles.container}>
+          <div className={styles.title}>Movie List</div>
+          <div className={styles.movies}>
+            {movies.map((movie) => (
+              <Movie
+                key={movie.id}
+                id={movie.id}
+                img={movie.medium_cover_image}
+                title={movie.title}
+                summary={movie.summary}
+                genres={movie.genres}
+              />
+            ))}
+          </div>
         </div>
       )}
     </div>
   );
 }
+
 export default Home;

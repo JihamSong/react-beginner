@@ -1,6 +1,8 @@
 import { useParams } from "react-router-dom";
 import { useEffect } from "react";
+import styles from "./Detail.module.css";
 
+/* 제목 클릭했을 때 화면 */
 function Detail() {
   const { id } = useParams();
   const getMovie = async () => {
