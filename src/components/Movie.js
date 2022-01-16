@@ -5,13 +5,22 @@ import styles from "./Movie.module.css";
 /* Movie 라우트는 영화 하나 보여줌 */
 function Movie({ id, img, title, summary, genres }) {
   return (
-    <div>
-      <h2>
-        <Link to={`/movie/${id}`}>{title}</Link>
-      </h2>
-      <img src={img} />
-      <p>{summary.length > 235 ? `${summary.slice(0, 235)} ...` : summary}</p>
-      <ul>{genres && genres.map((g) => <li key={g}>{g}</li>)}</ul>
+    <div className={styles.container}>
+      <div className={styles.title}>
+        <Link className={styles.titleLink} to={`/movie/${id}`}>
+          {title}
+        </Link>
+      </div>
+      <img className={styles.img} src={img} />
+      {/* <p>{summary.length > 235 ? `${summary.slice(0, 235)} ...` : summary}</p> */}
+      <ul className={styles.genresList}>
+        {genres &&
+          genres.map((g) => (
+            <li className={styles.genresItem} key={g}>
+              {g}
+            </li>
+          ))}
+      </ul>
     </div>
   );
 }

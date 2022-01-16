@@ -1,55 +1,48 @@
-/* .movie {
-  background-color: white;
-  margin-bottom: 70px;
-  font-weight: 300;
-  padding: 20px;
-  border-radius: 5px;
-  color: #adaeb9;
+.container {
   display: grid;
-  grid-template-columns: minmax(150px, 1fr) 2fr;
-  grid-gap: 20px;
+  grid-gap: 10px;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  align-content: center;
+  grid-template-rows: 70px 350px minmax(70px, max-content);
+  grid-template-columns: 300px;
+  font-family: "Varela Round", sans-serif;
+}
+
+.title {
+  padding-bottom: 0px;
+  text-align: center;
+  align-self: end;
+}
+.titleLink {
+  justify-items: center;
   text-decoration: none;
-  color: inherit;
-  box-shadow: 0 13px 27px -5px rgba(50, 50, 93, 0.25),
-    0 8px 16px -8px rgba(0, 0, 0, 0.3), 0 -6px 16px -6px rgba(0, 0, 0, 0.025);
+  color: rgb(233, 233, 233);
+  font-size: 25px;
+  font-weight: 500;
 }
-
-.movie__img {
-  position: relative;
-  top: -50px;
-  max-width: 150px;
-  width: 100%;
-  margin-right: 30px;
-  box-shadow: 0 30px 60px -12px rgba(50, 50, 93, 0.25),
-    0 18px 36px -18px rgba(0, 0, 0, 0.3), 0 -12px 36px -8px rgba(0, 0, 0, 0.025);
+.img {
+  border-radius: 10px;
+  box-shadow: 1px 2px 16px 5px #696969c9;
 }
-
-.movie__title,
-.movie__year {
-  margin: 0;
-  font-weight: 300;
-  text-decoration: none;
-}
-
-.movie__title a {
-  margin-bottom: 5px;
-  font-size: 24px;
-  color: #2c2c2c;
-  text-decoration: none;
-}
-
-.movie__genres {
+.genresList {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  margin-block: 0px;
   list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-wrap: wrap;
-  margin: 5px 0px;
+  padding-inline-start: 0px;
+  gap: 5px;
+  grid-template-columns: repeat(3, minmax(max-content, auto));
+  font-size: 13px;
 }
-
-.movie__genres li,
-.movie__year {
-  margin-right: 10px;
-  font-size: 14px;
+.genresItem {
+  justify-self: center;
+  align-self: center;
+  /* background-color: rgb(124, 124, 124); */
+  border: 2px solid rgba(175, 175, 175, 0.616);
+  color: rgb(201, 201, 201);
+  padding: 5px;
+  border-radius: 10px;
 }
- */

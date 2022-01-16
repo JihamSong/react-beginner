@@ -23,7 +23,7 @@ function Home() {
         <div className={styles.loading}></div>
       ) : (
         <div className={styles.container}>
-          <div className={styles.title}>Movie List</div>
+          <div className={styles.header}>Movie List</div>
           <div className={styles.movies}>
             {movies.map((movie) => (
               <Movie
